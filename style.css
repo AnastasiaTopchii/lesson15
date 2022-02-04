@@ -17,7 +17,7 @@ body {
 }
 
 .text {
-  font-size: 32px;
+  font-size: 40px;
   color: #98f5e1;
   margin: 0px;
   cursor: pointer;
@@ -92,14 +92,31 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   min-height: 100vh;
   margin-top: 30px;
-  background-color: violet;
 }
 
-/* .content {
+.container-moove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+}
+
+.content {
   position: absolute;
-} */
+  font-size: 70px;
+  color: #afbdb1;
+  text-shadow: 3px 3px 5px #a581e9, 5px 5px 5px #6acccfd8;
+  transition: transform 1s ease-out 0.25s;
+}
+
+.container-moove:hover .content {
+  transform: scale(150%);
+}
 
 .square {
   position: relative;
@@ -107,14 +124,50 @@ body {
   height: 200px;
 }
 
-.pink {
-  background-color: tomato;
+.blue {
   top: 0px;
   left: 0px;
+  background-color: #a3c4f3;
+  transition: transform 1s ease-out 0.25s;
+  transform-origin: top left;
+}
+
+.container-moove:hover .blue {
+  transform: rotate(90deg);
+}
+
+.light-blue {
+  top: 0px;
+  right: 0px;
+  background-color: #90dbf4;
+  transition: transform 1s ease-out 0.25s;
+  transform-origin: top right;
+}
+
+.container-moove:hover .light-blue {
+  transform: rotate(-90deg);
 }
 
 .violet {
-  background-color: rgb(158, 45, 158);
   top: 0px;
-  left: 0px;
+  right: 0px;
+  background-color: #cfbaf0;
+  transition: transform 1s ease-out 0.25s;
+  transform-origin: bottom left;
+}
+
+.container-moove:hover .violet {
+  transform: rotate(-90deg);
+}
+
+.pink {
+  top: 0px;
+  right: 0px;
+  background-color: #f1c0e8;
+  transition: transform 1s ease-out 0.25s;
+  transform-origin: bottom right;
+}
+
+.container-moove:hover .pink {
+  transform: rotate(90deg);
 }
